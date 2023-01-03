@@ -9,10 +9,14 @@ module.exports = {
     "@vue/eslint-config-typescript",
     "@vue/eslint-config-prettier",
   ],
+  env: {
+    node: true,
+    browser: true
+  },
   parserOptions: {
     ecmaVersion: "latest",
   },
   rules: {
-    "prettier/prettier": [1, { semi: false }],
+    "prettier/prettier": [1, { semi: false, trillingComma: false }],
   },
 }
