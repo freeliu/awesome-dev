@@ -65,7 +65,7 @@ const setTags = (route: any) => {
     tags.setTagsItem({
       name: route.name,
       title: route.meta.title,
-      path: route.fullPath,
+      path: route.fullPath
     })
   }
 }

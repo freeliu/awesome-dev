@@ -9,7 +9,7 @@ interface ListItem {
 export const useTagsStore = defineStore("tags", {
   state: () => {
     return {
-      list: <ListItem[]>[],
+      list: <ListItem[]>[]
     }
   },
   getters: {
@@ -18,7 +18,7 @@ export const useTagsStore = defineStore("tags", {
     },
     nameList: (state) => {
       return state.list.map((item) => item.name)
-    },
+    }
   },
   actions: {
     delTagsItem(index: number) {
@@ -48,6 +48,6 @@ export const useTagsStore = defineStore("tags", {
           break
         }
       }
-    },
-  },
+    }
+  }
 })

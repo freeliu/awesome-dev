@@ -8,7 +8,7 @@ const items = [
     icon: "Odometer",
     index: "/dashboard",
     title: "系统首页",
-    permiss: "1",
+    permiss: "1"
   },
   {
     icon: "Calendar",
@@ -19,25 +19,25 @@ const items = [
       {
         index: "/table",
         title: "常用表格",
-        permiss: "2",
+        permiss: "2"
       },
       {
         index: "/import",
         title: "导入Excel",
-        permiss: "2",
+        permiss: "2"
       },
       {
         index: "/export",
         title: "导出Excel",
-        permiss: "2",
-      },
-    ],
+        permiss: "2"
+      }
+    ]
   },
   {
     icon: "DocumentCopy",
     index: "/tabs",
     title: "tab选项卡",
-    permiss: "3",
+    permiss: "3"
   },
   {
     icon: "Edit",
@@ -48,12 +48,12 @@ const items = [
       {
         index: "/form",
         title: "基本表单",
-        permiss: "5",
+        permiss: "5"
       },
       {
         index: "/upload",
         title: "文件上传",
-        permiss: "6",
+        permiss: "6"
       },
       {
         index: "4",
@@ -63,41 +63,41 @@ const items = [
           {
             index: "/editor",
             title: "富文本编辑器",
-            permiss: "8",
+            permiss: "8"
           },
           {
             index: "/markdown",
             title: "markdown编辑器",
-            permiss: "9",
-          },
-        ],
-      },
-    ],
+            permiss: "9"
+          }
+        ]
+      }
+    ]
   },
   {
     icon: "Setting",
     index: "/icon",
     title: "自定义图标",
-    permiss: "10",
+    permiss: "10"
   },
   {
     icon: "PieChart",
     index: "/charts",
     title: "schart图表",
-    permiss: "11",
+    permiss: "11"
   },
   {
     icon: "Warning",
     index: "/permission",
     title: "权限管理",
-    permiss: "13",
+    permiss: "13"
   },
   {
     icon: "CoffeeCup",
     index: "/donate",
     title: "支持作者",
-    permiss: "14",
-  },
+    permiss: "14"
+  }
 ]
 
 const route = useRoute()
@@ -175,7 +175,6 @@ const sidebar = useSidebarStore()
     </el-menu>
   </div>
 </template>
-
 
 <style scoped>
 .sidebar {

@@ -18,7 +18,7 @@ import LayoutSidebar from "@/component/layout/LayoutSidebar.vue"
   </el-container>
 </template>
 <style scoped lang="scss">
-.layout-global{
+.layout-global {
   min-height: 100vh;
 }
 </style>

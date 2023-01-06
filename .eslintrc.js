@@ -7,16 +7,16 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier",
+    "@vue/eslint-config-prettier"
   ],
   env: {
     node: true,
     browser: true
   },
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: "latest"
   },
   rules: {
-    "prettier/prettier": [1, { semi: false, trillingComma: false }],
-  },
+    "prettier/prettier": [1, { semi: false, trailingComma: "none", printWidth: 90 }]
+  }
 }

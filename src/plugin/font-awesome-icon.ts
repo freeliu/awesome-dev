@@ -5,7 +5,12 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 /* import specific icons */
-import { faMoon, faSearch, faSun, faUserSecret } from "@fortawesome/free-solid-svg-icons"
+import {
+  faMoon,
+  faSearch,
+  faSun,
+  faUserSecret
+} from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 /* add icons to the library */
@@ -19,5 +24,5 @@ export default {
   install: (app: App) => {
     // Plugin code goes here
     app.component("FontAwesomeIcon", FontAwesomeIcon)
-  },
+  }
 }

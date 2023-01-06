@@ -1,3 +1,37 @@
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { useSidebarStore } from "@/store/sidebar";
+import { useRouter } from "vue-router";
+import VTSwitchAppearance from "@/component/VTSwitchAppearance.vue"
+
+
+const username: string | null = localStorage.getItem("ms_username");
+const message: number = 2;
+
+const sidebar = useSidebarStore();
+// 侧边栏折叠
+const collapseChage = () => {
+  sidebar.handleCollapse();
+};
+
+onMounted(() => {
+  if (document.body.clientWidth < 1500) {
+    collapseChage();
+  }
+});
+
+// 用户名下拉菜单选择事件
+const router = useRouter();
+const handleCommand = (command: string) => {
+  if (command == "loginout") {
+    localStorage.removeItem("ms_username");
+    router.push("/login");
+  } else if (command == "user") {
+    router.push("/user");
+  }
+};
+</script>
+
 <template>
   <div class="flex items-center h-full xl:container xl:mx-auto">
     <div class="text-2xl">Awesome Dev</div>
@@ -21,36 +55,6 @@
         </el-dropdown-menu>
       </template>
     </el-dropdown>
+    <v-t-switch-appearance />
   </div>
 </template>
-<script setup lang="ts">
-import { onMounted } from "vue"
-import { useSidebarStore } from "@/store/sidebar"
-import { useRouter } from "vue-router"
-
-const username: string | null = localStorage.getItem("ms_username")
-const message: number = 2
-
-const sidebar = useSidebarStore()
-// 侧边栏折叠
-const collapseChage = () => {
-  sidebar.handleCollapse()
-}
-
-onMounted(() => {
-  if (document.body.clientWidth < 1500) {
-    collapseChage()
-  }
-})
-
-// 用户名下拉菜单选择事件
-const router = useRouter()
-const handleCommand = (command: string) => {
-  if (command == "loginout") {
-    localStorage.removeItem("ms_username")
-    router.push("/login")
-  } else if (command == "user") {
-    router.push("/user")
-  }
-}
-</script>
