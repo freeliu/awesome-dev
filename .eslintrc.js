@@ -17,6 +17,6 @@ module.exports = {
     ecmaVersion: "latest"
   },
   rules: {
-    "prettier/prettier": [1, { semi: false, trailingComma: "none", printWidth: 90 }]
+    "prettier/prettier": [1, { semi: false, trailingComma: "none", printWidth: 160 }]
   }
 }

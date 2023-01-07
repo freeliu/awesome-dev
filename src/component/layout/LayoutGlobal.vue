@@ -5,12 +5,12 @@ import LayoutTags from "@/component/layout/LayoutTags.vue"
 import LayoutSidebar from "@/component/layout/LayoutSidebar.vue"
 </script>
 <template>
-  <el-container class="layout-global max-w-screen-xl mx-auto">
-    <el-header>
-      <LayoutHeader></LayoutHeader>
+  <el-container class="min-h-screen">
+    <el-header class="border-bottom">
+      <LayoutHeader class="max-w-screen-xl mx-auto"></LayoutHeader>
     </el-header>
-    <el-container>
-      <el-aside width="200px">
+    <el-container class="w-full max-w-screen-xl mx-auto">
+      <el-aside  width="200px">
         <LayoutSidebar></LayoutSidebar>
       </el-aside>
       <el-main>
@@ -19,8 +19,3 @@ import LayoutSidebar from "@/component/layout/LayoutSidebar.vue"
     </el-container>
   </el-container>
 </template>
-<style scoped lang="scss">
-.layout-global {
-  min-height: 100vh;
-}
-</style>

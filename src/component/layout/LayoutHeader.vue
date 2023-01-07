@@ -25,15 +25,9 @@ const handleCommand = (command: string) => {
 </script>
 
 <template>
-  <div class="flex items-center h-full">
+  <div class="flex items-center h-full ">
     <div class="text-2xl">Awesome Dev</div>
-<!--    <el-input class="w-64 ml-5 hidden sm:block">-->
-<!--      <template #prefix>-->
-<!--        <font-awesome-icon icon="fa-solid fa-search" />-->
-<!--      </template>-->
-<!--    </el-input>-->
     <font-awesome-icon class="text-2xl ml-auto" icon="fa-brands fa-github" />
-
     <v-t-switch-appearance class="ml-5" />
   </div>
 </template>

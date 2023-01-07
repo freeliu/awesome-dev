@@ -36,20 +36,8 @@ const router = createRouter({
       component: LayoutGlobal,
       children: [
         {
-          path: "a",
-          meta: {
-            title: "1",
-            isMenu: true
-          },
-          component: () => import("../views/HomeView.vue")
-        },
-        {
-          meta: {
-            title: "2",
-            isMenu: true
-          },
-          path: "b",
-          component: () => import("../views/HomeView.vue")
+          path: "",
+          component: () => import("../views/VueResource.vue")
         }
       ]
     }
