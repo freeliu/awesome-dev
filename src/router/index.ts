@@ -6,21 +6,52 @@ const router = createRouter({
   routes: [
     {
       path: "/",
+      meta: {
+        isMenu: true,
+        title: "首页"
+      },
       component: LayoutGlobal,
       children: [
         {
           path: "",
           component: () => import("../views/HomeView.vue")
+        },
+
+        {
+          meta: {
+            title: "library", // lodash 等
+            isMenu: true
+          },
+          path: "library",
+          component: () => import("../views/HomeView.vue")
         }
       ]
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue")
+      meta: {
+        title: "vue",
+        isMenu: true
+      },
+      path: "/vue/",
+      component: LayoutGlobal,
+      children: [
+        {
+          path: "a",
+          meta: {
+            title: "1",
+            isMenu: true
+          },
+          component: () => import("../views/HomeView.vue")
+        },
+        {
+          meta: {
+            title: "2",
+            isMenu: true
+          },
+          path: "b",
+          component: () => import("../views/HomeView.vue")
+        }
+      ]
     }
   ]
 })

@@ -8,17 +8,9 @@ import VTSwitchAppearance from "@/component/VTSwitchAppearance.vue"
 const username: string | null = localStorage.getItem("ms_username");
 const message: number = 2;
 
-const sidebar = useSidebarStore();
-// 侧边栏折叠
-const collapseChage = () => {
-  sidebar.handleCollapse();
-};
 
-onMounted(() => {
-  if (document.body.clientWidth < 1500) {
-    collapseChage();
-  }
-});
+
+
 
 // 用户名下拉菜单选择事件
 const router = useRouter();
@@ -33,7 +25,7 @@ const handleCommand = (command: string) => {
 </script>
 
 <template>
-  <div class="flex items-center h-full max-w-screen-2xl mx-auto">
+  <div class="flex items-center h-full">
     <div class="text-2xl">Awesome Dev</div>
 <!--    <el-input class="w-64 ml-5 hidden sm:block">-->
 <!--      <template #prefix>-->
