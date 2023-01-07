@@ -12,6 +12,10 @@ export default defineConfig({
   css: {
     devSourcemap: true
   },
+  server: {
+    port: 8080,
+    open: true
+  },
   plugins: [
     vue(),
     vueJsx(),

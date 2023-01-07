@@ -33,28 +33,15 @@ const handleCommand = (command: string) => {
 </script>
 
 <template>
-  <div class="flex items-center h-full xl:container xl:mx-auto">
+  <div class="flex items-center h-full max-w-screen-2xl mx-auto">
     <div class="text-2xl">Awesome Dev</div>
-    <el-input class="w-72">
-      <template #prefix>
-        <font-awesome-icon icon="fa-solid fa-search" />
-      </template>
-    </el-input>
-    <font-awesome-icon class="text-2xl" icon="fa-brands fa-github" />
+<!--    <el-input class="w-64 ml-5 hidden sm:block">-->
+<!--      <template #prefix>-->
+<!--        <font-awesome-icon icon="fa-solid fa-search" />-->
+<!--      </template>-->
+<!--    </el-input>-->
+    <font-awesome-icon class="text-2xl ml-auto" icon="fa-brands fa-github" />
 
-    <el-dropdown @command="handleCommand">
-      <span class="el-dropdown-link"> Dropdown List </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item command="light">
-            <font-awesome-icon class="text-xl" icon="fa-brands fa-github" />
-            light
-          </el-dropdown-item>
-          <el-dropdown-item command="dark">Action 4</el-dropdown-item>
-          <el-dropdown-item command="system">Action 5</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
-    <v-t-switch-appearance />
+    <v-t-switch-appearance class="ml-5" />
   </div>
 </template>
