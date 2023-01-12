@@ -40,6 +40,57 @@ const router = createRouter({
           component: () => import("../views/VueResource.vue")
         }
       ]
+    },
+    {
+      path: "/note/",
+      meta: {
+        title: "note",
+        isMenu: "true"
+      },
+      component: LayoutGlobal,
+      children: [
+        {
+          path: "git",
+          meta: {
+            title: "git",
+            isMenu: "true"
+          },
+          component: () => import("@/views/note/GitView.vue")
+        },
+        {
+          path: "md",
+          meta: {
+            title: "md",
+            isMenu: "true"
+          },
+          component: () => import("@/views/note/MDView.vue")
+        }
+      ]
+    },{
+      path: "/npm/",
+      meta: {
+        title: "npm",
+        isMenu: "true"
+      },
+      component: LayoutGlobal,
+      children: [
+        {
+          path: "useful",
+          meta: {
+            title: "useful",
+            isMenu: "true"
+          },
+          component: () => import("@/views/npm/UsefulView.vue")
+        },
+        {
+          path: "my",
+          meta: {
+            title: "my",
+            isMenu: "true"
+          },
+          component: () => import("@/views/npm/MyView.vue")
+        }
+      ]
     }
   ]
 })
