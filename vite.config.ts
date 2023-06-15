@@ -9,6 +9,7 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base:'.',
   css: {
     devSourcemap: true
   },
@@ -30,5 +31,6 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url))
     }
-  }
+  },
+
 })
