@@ -1,6 +1,10 @@
 {
   "name": "awesome-dev",
   "version": "0.0.0",
+  engines: {
+    node: '>=v18.16.0',
+    npm: '>=9.7.1',
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
