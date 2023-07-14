@@ -1,6 +1,6 @@
 <script lang="ts" setup></script>
 <template>
-  <pre>
+    <pre>
     #SETUP
     git config --global user.name [olive liu]
     # set a name that is identifiable for credit when review version history
@@ -50,6 +50,7 @@
     git log
     show all commits in the current branch’s history
 
-  </pre>
+  </pre
+    >
 </template>
 <style scoped lang="scss"></style>

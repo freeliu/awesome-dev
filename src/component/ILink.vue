@@ -8,7 +8,7 @@ const title = computed(() => {
 })
 </script>
 <template>
-  <el-link :underline="false" target="_blank" :href="href" style="display: block">
+  <el-link class="dark:text-slate-400" :underline="false" target="_blank" :href="href" style="display: block">
     <span class="inline-block min-w-fit w-80">{{ title }}</span>
     <slot></slot>
   </el-link>
