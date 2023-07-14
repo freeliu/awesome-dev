@@ -151,8 +151,8 @@ function useAppearance() {
 
 .vt-switch-check {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 2px;
+  left: 2px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
