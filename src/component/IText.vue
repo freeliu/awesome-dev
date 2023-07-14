@@ -5,8 +5,8 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-  <div>
-    <span class="inline-block min-w-fit w-80">{{ title }}</span>
+  <div class="flex">
+    <span class="inline-block min-w-fit w-80 shrink-0">{{ title }}</span>
     <span style="color: var(--el-text-color-secondary)"> <slot></slot></span>
   </div>
 </template>
