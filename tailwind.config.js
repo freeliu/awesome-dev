@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-const defaultConfig = require("tailwindcss/stubs/defaultConfig.stub")
+// const defaultConfig = require("tailwindcss/stubs/defaultConfig.stub.ts") tailwindcss 升级后不兼容
 // import { cloneDeep } from "lodash-es"
 
-const { theme } = defaultConfig
+/*const { theme } = defaultConfig
 // rem to px
 Object.entries(theme).forEach(([key1, value1]) => {
   if (typeof value1 === "object") {
@@ -12,13 +12,11 @@ Object.entries(theme).forEach(([key1, value1]) => {
       }
     })
   }
-})
+})*/
 
-module.exports = {
+export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: "class",
-  theme: {
-    extend: theme
-  },
+  theme: {},
   plugins: []
 }

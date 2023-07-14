@@ -5,3 +5,12 @@ html.dark{
   --el-bg-color: rgb(17, 24, 39);
   background-color: var(--el-bg-color);
 }
+
+
+.el-main{
+  max-height: calc(100vh - 60px);
+  &::-webkit-scrollbar{
+    color: transparent;
+  }
+
+}

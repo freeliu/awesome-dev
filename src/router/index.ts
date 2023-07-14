@@ -58,6 +58,14 @@ const router = createRouter({
           component: () => import("@/views/note/GitView.vue")
         },
         {
+          path: "regex",
+          meta: {
+            title: "regex",
+            isMenu: "true"
+          },
+          component: () => import("@/views/note/RegexView.vue")
+        },
+        {
           path: "md",
           meta: {
             title: "md",
