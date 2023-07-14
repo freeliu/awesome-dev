@@ -6,7 +6,7 @@ import { ElConfigProvider } from "element-plus"
 
 <template>
   <el-config-provider :locale="zhCn">
-    <RouterView />
+    <RouterView class="dark:text-slate-400" />
   </el-config-provider>
 </template>
 

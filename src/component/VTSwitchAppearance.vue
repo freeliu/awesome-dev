@@ -100,7 +100,7 @@ function useAppearance() {
   --vt-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
   --vt-c-white-mute: #f1f1f1;
   --vt-c-bg-mute: var(--vt-c-white-mute);
-  --vt-c-black-mute: #2f2f2f;
+  --vt-c-black-mute: #2f2f2f4d;
   --vt-c-text-1: #213547;
 }
 .vt-switch {
