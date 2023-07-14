@@ -32,15 +32,15 @@ const sidebar = useSidebarStore()
     <template v-for="l1 in menus" :key="l1.path">
       <el-sub-menu v-if="Array.isArray(l1.children) && l1.children.length > 0" :index="l1.path">
         <template #title>
-          <span class="dark:text-slate-400">{{ l1.meta?.title }}</span>
+          <span >{{ l1.meta?.title }}</span>
         </template>
-        <el-menu-item class="dark:text-slate-400" v-for="l2 in l1.children" :index="l2.meta.absolutePath" :key="l2.path">
+        <el-menu-item  v-for="l2 in l1.children" :index="l2.meta.absolutePath" :key="l2.path">
           {{ l2.meta?.title }}
         </el-menu-item>
       </el-sub-menu>
       <el-menu-item v-else :index="l1.path">
         <!--          <el-icon><icon-menu /></el-icon>-->
-        <span class="dark:text-slate-400">{{ l1.meta?.title }}</span>
+        <span >{{ l1.meta?.title }}</span>
       </el-menu-item>
     </template>
   </el-menu>
