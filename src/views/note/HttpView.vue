@@ -19,8 +19,8 @@ const activeNames = ref(["1"])
 </script>
 
 <template>
-  <div>
-    <el-collapse v-model="activeNames">
+  <div class="main">
+    <el-collapse v-model="activeNames"  >
       <el-collapse-item title="status codes" name="1">
         <p v-for="item in list" :key="item">
           <el-popover placement="right" width="600">
@@ -33,4 +33,12 @@ const activeNames = ref(["1"])
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main * {
+  @apply text-base
+}
+:deep(.el-collapse-item__header){
+  font-size: 16px!important;
+}
+
+</style>
