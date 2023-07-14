@@ -66,6 +66,14 @@ const router = createRouter({
           component: () => import("@/views/note/RegexView.vue")
         },
         {
+          path: "http",
+          meta: {
+            title: "http",
+            isMenu: "true"
+          },
+          component: () => import("@/views/note/HttpView.vue")
+        },
+        {
           path: "md",
           meta: {
             title: "md",
