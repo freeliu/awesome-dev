@@ -42,6 +42,24 @@ const router = createRouter({
       ]
     },
     {
+      path: "/react/",
+      meta:{
+        isMenu: true,
+        title: 'react'
+      },
+      component: LayoutGlobal,
+      children: [
+        {
+          path: "tool",
+          component: () => import("../views/react/ToolView.vue"),
+          meta: {
+            title: "tools",
+            isMenu: true
+          }
+        }
+      ]
+    },
+    {
       path: "/note/",
       meta: {
         title: "note",
@@ -82,7 +100,8 @@ const router = createRouter({
           component: () => import("@/views/note/MDView.vue")
         }
       ]
-    },{
+    },
+    {
       path: "/npm/",
       meta: {
         title: "npm",
