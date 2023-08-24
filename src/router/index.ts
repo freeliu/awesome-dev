@@ -28,11 +28,29 @@ const router = createRouter({
       ]
     },
     {
+      path: "/typescript/",
+      component: LayoutGlobal,
+      meta: {
+        isMenu: true,
+        title: "typescript"
+      },
+      children: [
+        {
+          path: "tool",
+          component: () => import("../views/typescript/ToolView.vue"),
+          meta: {
+            title: "tools",
+            isMenu: true
+          }
+        }
+      ]
+    },
+    {
+      path: "/vue/",
       meta: {
         title: "vue",
         isMenu: true
       },
-      path: "/vue/",
       component: LayoutGlobal,
       children: [
         {
@@ -43,9 +61,9 @@ const router = createRouter({
     },
     {
       path: "/react/",
-      meta:{
+      meta: {
         isMenu: true,
-        title: 'react'
+        title: "react"
       },
       component: LayoutGlobal,
       children: [
